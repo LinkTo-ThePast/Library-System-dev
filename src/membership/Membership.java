@@ -2,17 +2,27 @@ package membership;
 
 import java.util.Arrays;
 
+
 public class Membership {
 	
 	// attributes: ---> basic info for clients/readers
-	private static String firstName;
-	private static String lastName;
-	private static String email;
-	private static int age;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private int age;
 	private String membershipType;
 	 
-	// methods:
+	// constructor
+	public Membership(String firstName, String lastName, String email, int age, String membershipType) {
+		firstName = this.firstName;
+		lastName = this.lastName;
+		email = this.email;
+		age = this.age;
+		membershipType = this.membershipType;
+	}
 	
+	// methods:
+
 	// 1. retrieve a book or books from the library;
 	
 	private int bookToRead() {
@@ -28,5 +38,24 @@ public class Membership {
 		}
 		return maxBooks;
 	}
+	
+	// 2. encapsulation
+	public String getFirstName() {
+		return firstName;
+	}
+	
+	public void setFirstName(String firstName) {
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < firstName.length(); i++) {
+			char c = firstName.charAt(i);
+			if (Character.isAlphabetic(c)) {
+				sb.append(c);
+			} else {
+				System.out.println("Please, introduce a valid character!");
+			}
+		}
+		this.firstName = sb.toString();
+	}
+	
 }
 
