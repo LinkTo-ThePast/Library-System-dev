@@ -57,5 +57,21 @@ public class Membership {
 		this.firstName = sb.toString();
 	}
 	
+	public void setLastName(String lastName) {
+		// objective: verify only alphabetic characters as parameters
+		// 1) iterate over each character of the string parameter -> analyze each character -> if is correct, keep it 
+		// 2) we need a structure that allows us to keep characters and when finish to iterate, then obtain the string;
+		StringBuilder sb = new StringBuilder();
+		for(int i = 0; i < lastName.length(); i++) {
+			char c = lastName.charAt(i); // access to the character in a string with charAt method 
+			if(Character.isAlphabetic(c)) {
+				sb.append(c);
+			} else {
+				System.out.println("Please, introduce a valid character!");
+			}
+		}
+		this.lastName = sb.toString();
+	}
+	
 }
 
