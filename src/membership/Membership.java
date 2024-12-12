@@ -41,7 +41,7 @@ public class Membership {
 	
 	// 2. encapsulation
 	public String getFirstName() {
-		return firstName;
+		return this.firstName;
 	}
 	
 	public void setFirstName(String firstName) {
@@ -73,5 +73,14 @@ public class Membership {
 		this.lastName = sb.toString();
 	}
 	
+	public String getLastName() {
+		return this.lastName;
+	}
+	
+	public void setAge(int age) {
+		if(age > 10) {
+			this.age = age;
+		}
+	}
 }
 
