@@ -1,0 +1,1 @@
+INDEX VERSION 1.134+C:\Dreams\library-system-dev\Library_system_dev\.metadata\.plugins\org.eclipse.jdt.core
